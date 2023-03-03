@@ -1,0 +1,76 @@
+@import "./variable.scss";
+
+.table__container {
+  overflow-y: auto;
+  table {
+    width: 100%;
+    min-width: 400px;
+    border-spacing: 0;
+    thead {
+      // background-color: $main-bg;
+      font-size: 1.2rem;
+      tr {
+        text-align: left;
+      }
+    }
+    tbody {
+      text-transform: capitalize;
+      tr {
+        &:hover {
+          background-color: $main-color;
+          color: $txt-white
+        }
+      }
+    }
+    td {
+      font-size: 1.1rem;
+    }
+  }
+  th, td {
+    padding: 15px 10px;
+  }
+  &::-webkit-scrollbar {
+    height: 6px;
+    cursor: pointer;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $second-color;
+  }
+}
+
+.table {
+  &__pagination {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    margin-top: 1.3rem;
+
+    &--item {
+      cursor: pointer;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $main-bg;
+      &.active, &:hover {
+        background-color: $main-color;
+        color: $txt-white;
+      }
+      &:not(:last-child) {
+        margin-right: 1.4rem;
+      }
+    }
+  }
+}

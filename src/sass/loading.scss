@@ -1,0 +1,12 @@
+@import "./variable.scss";
+
+.loading {
+  &__container {
+    height: calc(100vh - var(--topnav-height));
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $main-bg;
+    justify-content: center;
+  }
+}

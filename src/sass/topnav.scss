@@ -1,0 +1,76 @@
+@import "./variable.scss";
+
+.notification {
+  &__container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    i {
+      margin-right: 2rem;
+      font-size: 1.8rem;
+    }
+    &:hover {
+      background-color: $second-color;
+    }
+  }
+}
+
+.nav {
+  &__right {
+    display: flex;
+    align-items: center;
+
+    &--item {
+      margin-left: 3rem;
+    }
+  }
+
+  &__container {
+    height: $topnav-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  &__search--box {
+    display: flex;
+    align-items: center;
+    background-color: $main-bg;
+    padding-right: .8rem;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    i {
+      font-size: 1.8rem;
+      cursor: pointer;
+      background-color: $main-bg;
+    }
+
+    input {
+      border: 0;
+      padding: 1rem 1.4rem;
+      color: $txt-color;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__right__user {
+    display: flex;
+    align-items: center;
+    &--image {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

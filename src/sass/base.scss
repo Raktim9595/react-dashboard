@@ -1,0 +1,56 @@
+@import "./variable.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.7px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.main-body {
+  display: flex;
+  color: $txt-color;
+}
+
+.main-right {
+  background-color: $second-bg;
+  width: 100%;
+  margin-left: $sidebar-width;
+  min-height: 100vh;
+}
+
+.light-background {
+  background-color: $main-bg-light;
+  color: #000;
+}
+
+.dark-background {
+  background-color: $main-bg-dark;
+  color: #fff;
+}
+
+.blue-color {
+  background-color: $main-color-blue;
+  color: #fff;
+}
+.red-color {
+  background-color: $main-color-red;
+  color: #fff;
+}
+.green-color {
+  background-color: $main-color-green;
+  color: #fff;
+}
+.orange-color {
+  background-color: $main-color-orange;
+  color: #fff;
+}
+.cyan-color {
+  background-color: $main-color-cyan;
+  color: #000;
+}

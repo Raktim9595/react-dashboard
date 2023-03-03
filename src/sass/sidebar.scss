@@ -1,0 +1,60 @@
+@import "./variable.scss";
+
+.sidebar {
+  min-width: $sidebar-width;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: $main-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: $box-shadow;
+  padding-top: 4rem;
+  &__logo {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
+
+    img {
+      height: 4.5rem;
+    }
+  }
+  &__item {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    span {
+      text-transform: capitalize;
+    }
+
+    i {
+      margin-right: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .active {
+      background-image: linear-gradient(to right, $main-color, $second-color);
+      &:hover {
+        color: $txt-white;
+      }
+    }
+
+    &--single {
+      cursor: pointer;
+      border-radius: $border-radius;
+      padding: 1.2rem 2rem;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+}
+  & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

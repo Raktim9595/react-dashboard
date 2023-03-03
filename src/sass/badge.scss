@@ -1,0 +1,21 @@
+@import "./variable.scss";
+
+.badge {
+  padding: 6px 11px;
+  color: $txt-white;
+  border-radius: 1rem;
+  box-shadow: $box-shadow;
+  text-transform: capitalize;
+  &--danger {
+    background-color: $main-color-red;
+  }
+  &--success {
+    background-color: $main-color-green;
+  }
+  &--warning {
+    background-color: $main-color-orange;
+  }
+  &--primary {
+    background-color: $main-color-blue;
+  }
+}

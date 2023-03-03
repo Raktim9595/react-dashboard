@@ -1,0 +1,55 @@
+@import "./variable.scss";
+
+.status-card {
+  display: flex;
+  padding: 2.7rem 3rem;
+  background-color: $main-bg;
+  align-items: center;
+  margin-bottom: 3rem;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  overflow: hidden;
+  margin-top: .8rem;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    padding-top: 100%;
+    background-image: linear-gradient(to right, $main-color, $second-color);
+    border-radius: 50%;
+    top: 0;
+    left: -50%;
+    transform: scale(0);
+    transition: transform 0.8s ease 0s;
+  }
+
+  &:hover {
+    color: $txt-white;
+    &::before {
+      transform: scale(3);
+    }
+  }
+
+  &__icon {
+    height: 100%;
+    width: 30%;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  &__info {
+    flex-grow: 1;
+    text-align: center;
+    z-index: 1;
+    text-transform: capitalize;
+    h4 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

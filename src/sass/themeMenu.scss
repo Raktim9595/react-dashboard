@@ -1,0 +1,84 @@
+@import "./variable.scss";
+
+.theme-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: $main-bg;
+  box-shadow: $box-shadow;
+  z-index: 99;
+  padding: 20px;
+  transition: right .8s $transition-cubic;
+  &.active {
+    right: 0;
+  }
+
+  h4 {
+    font-size: 1.9rem;
+    font-weight: 400;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 1.3rem;
+    background: transparent;
+    font-size: 3rem;
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__select {
+    margin-top: 4rem;
+    span {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.mode-list {
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 1.2rem;
+    }
+    &:not(:last-child) {
+      margin-bottom: .8rem;
+    }
+  }
+
+  &__color {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+    font-size: 1.9rem;
+
+    i {
+      transform: scale(0);
+      transition: transform .5s $transition-cubic;
+    }
+
+    &.active {
+      i {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
